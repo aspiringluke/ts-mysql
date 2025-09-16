@@ -1,0 +1,24 @@
+{
+	"name": "atividademax",
+	"version": "1.0.0",
+	"main": "atividade15092025.js",
+	"type": "module",
+	"scripts": {
+		"start": "npx tsc && node dist/atividade15092025.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"knex": "^3.1.0",
+		"mysql2": "^3.14.5",
+		"prompt-sync": "^4.2.0"
+	},
+	"devDependencies": {
+		"@types/node": "^24.5.0",
+		"@types/prompt-sync": "^4.2.3",
+		"dotenv": "^17.2.2",
+		"typescript": "^5.9.2"
+	}
+}
