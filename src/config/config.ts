@@ -1,7 +1,18 @@
 import knex from "knex";
 import dotenv from "dotenv";
+import promptSync from "prompt-sync";
 
 dotenv.config();
+
+export function logar()
+{
+    const prompt = promptSync();
+
+    let login = prompt("Login: ");
+    let senha = prompt("Senha: ");
+    
+    return conectar(login, senha);
+}
 
 export function conectar(login: string, senha: string)
 {
@@ -21,6 +32,6 @@ export function conectar(login: string, senha: string)
 
         return conexao;
     } catch(err) {
-        console.log("A conexão com o banco falhou: ", err);
+        throw new Error(`A conexão com o banco falhou: ${err}`);
     }
 }
